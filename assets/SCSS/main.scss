@@ -1,0 +1,65 @@
+*{
+   transition: .5s; 
+}
+
+body{
+    
+    display: flex;
+    .side-bar{
+        display: none;
+        width: 15%;
+        height: 100vh;
+        
+        .side-bar-section{
+            width: 100%;
+            height: 20%;
+            border: #fff solid 1px;
+            &:hover{
+                background: #444;
+            }
+        }
+    }
+
+    .side-bar-active{
+        display: block;
+        animation-name: side;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes side{
+        from{
+            transform: translateX(-100%);
+        }
+
+        to{
+            transform: translateX(0px);
+        }
+        
+    }
+
+    .side-bar-active-minus{
+        display: block;
+        animation-name: sideMinus;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes sideMinus{
+        from{
+            transform: translateX( 0px );
+        }
+
+        to{
+            transform: translateX(-100%);
+        }
+        
+    }
+    button{
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        top: 10px;
+        left: 300px;
+    }
+}
+
